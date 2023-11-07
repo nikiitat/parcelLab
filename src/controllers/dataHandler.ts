@@ -4,8 +4,15 @@ import { IncomingData } from './incomingDataType';
 const dataHandler = async (req: Request, res: Response) => {
   const incomingData: IncomingData = req.body;
   const parcelLabData = mapToParcelLabData(incomingData);
+ƒ
+  // const options = {
+  //   method: 'POST',
+  //   body: JSON.stringify(parcelLabData),
+  //   headers: { 'Content-Type': 'application/json' },
+  // };
+  // const response = await fetch('https://cataas.com/cat', options);
 
-  res.send(parcelLabData);
+  res.status(201).send('Accepted');
 };
 
 const mapToParcelLabData = (incomingData: IncomingData) => {
